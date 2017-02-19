@@ -1,0 +1,26 @@
+{
+	"timing": "00 00 07 * * *",
+	"timeout": "5000",
+	"timezone": "Asia/Shanghai",
+	"userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36",
+	"pages": [{
+		"title": "自住房通知公告",
+		"url": "http://www.bjjs.gov.cn/bjjs/fwgl/zzxspzf/index.shtml",
+		"selector": ".tzgg_list_box"
+	}, {
+		"title": "local",
+		"url": "http://localhost:3007/",
+		"selector": "section",
+		"mail": {
+			"receivers": ["yangjvn@126.com", "huoyan91@163.com"]
+		}
+	}],
+	"nodemailer": {
+		"service": "126",
+		"from": "news_grabber@126.com",
+		"auth": {
+			"user": "news_grabber@126.com",
+			"pass": "123456a"
+		}
+	}
+}
