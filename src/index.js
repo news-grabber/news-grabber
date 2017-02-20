@@ -1,5 +1,7 @@
+#!/usr/bin/env node
+
 import cron from 'cron';
-import config from '../config.json';
+import config from './config.js';
 import Browser from './browser.js';
 import tracker from './tracker.js';
 import mail from './mail.js';

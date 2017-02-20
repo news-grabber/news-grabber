@@ -1,6 +1,6 @@
 import request from 'request';
 import Promise from 'bluebird';
-import config from '../config.json';
+import config from './config.js';
 import Debug from 'debug';
 import phantom from 'phantom';
 
@@ -30,8 +30,12 @@ class Browser {
     retrieve(entry) {
         var js = [
             'function() {',
-            `  var el = document.querySelector('${entry.selector}');`,
-            `  return el.innerText;`,
+            `  var els = document.querySelectorAll('${entry.selector}');`,
+            '  var text = [];',
+            '  for(var i=0; i<els.length; i++){',
+            '    text.push(els[i].innerText);',
+            '  }',
+            `  return text.join('\\n');`,
             '}'
         ].join('\n');
         return this.openPage(entry.url)

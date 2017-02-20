@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer';
-import config from '../config.json';
+import config from './config.js';
 import _ from 'lodash';
 import Promise from 'bluebird';
 import Debug from 'debug';
