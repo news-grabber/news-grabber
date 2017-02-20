@@ -12,6 +12,7 @@ try {
     var config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 } catch (e) {
     console.error(`you need a news-grabberc.json file in the cwd`);
+    process.exit();
 }
 
 export default config;
