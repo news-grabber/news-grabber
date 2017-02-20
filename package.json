@@ -1,6 +1,6 @@
 {
   "name": "news-grabber",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Keep you posted for any updated news from web pages.",
   "main": "index.js",
   "scripts": {
