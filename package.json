@@ -1,7 +1,7 @@
 {
   "name": "news-grabber",
   "version": "1.0.0",
-  "description": "",
+  "description": "Keep you posted for any updated news from web pages.",
   "main": "index.js",
   "scripts": {
     "test": "DEBUG=news-grabber:* NODE_ENV=development mocha --compilers js:babel-core/register",
@@ -13,7 +13,7 @@
     "postversion": "git push && git push --tags"
   },
   "bin": {
-      "news-grabber": "node ./lib/index.js"
+      "news-grabber": "./lib/index.js"
   },
   "repository": {
     "type": "git",
