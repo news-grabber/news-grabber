@@ -30,7 +30,7 @@ describe('browser', function() {
             .retrieve({
                 url: 'http://localhost:9999',
                 selector: 'html'
-            })).to.eventually.be.rejectedWith('network error');
+            })).to.eventually.be.rejectedWith(/ECONNREFUSED/);
     });
     it('should resolve with html selector', function() {
         return expect(browser
